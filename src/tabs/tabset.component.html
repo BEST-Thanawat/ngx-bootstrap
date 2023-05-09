@@ -2,7 +2,7 @@
     (click)="$event.preventDefault()"
     [attr.aria-label]="ariaLabel"
     role="tablist">
-  <li *ngFor="let tabz of tabs; let i = index" [ngClass]="['nav-item', tabz.customClass || '']"
+  <li role="presentation" *ngFor="let tabz of tabs; let i = index" [ngClass]="['nav-item', tabz.customClass || '']"
       [class.active]="tabz.active" [class.disabled]="tabz.disabled" (keydown)="keyNavActions($event, i)">
     <a href="javascript:void(0);" class="nav-link" role="tab"
        [attr.aria-controls]="tabz.id ? tabz.id : ''"
